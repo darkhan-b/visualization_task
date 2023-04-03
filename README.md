@@ -27,9 +27,9 @@ Launch Application for output plot...
 jupyter nbconvert --execute --to notebook --inplace Jupyter.ipynb
 ```
 
-To check unit-tests command:
+To check unit-tests command (in main directory of project):
 ```
-python -m unittest discover
+python -m unittest discover 
 ```
 Should be 3 OK test responses
 
