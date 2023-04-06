@@ -31,7 +31,7 @@ class TestPlots(unittest.TestCase): # create test plot class using unittest
 
         # Check that the first plot has the correct data
         fig, ax = plt.subplots()
-        ax.plot(df['min'], df['max']) # columns
+        ax.plot(df['mean'], df['ceiling_mean']) # columns
         expected_path = 'plots/plot1.png' # plot path
         actual_path = self.paths[0] # index
         self.assertTrue(os.path.exists(expected_path))
@@ -40,7 +40,7 @@ class TestPlots(unittest.TestCase): # create test plot class using unittest
 
         # Check that the second plot has the correct data
         fig, ax = plt.subplots()
-        ax.plot(df['gt_corners'], df['rb_corners']) # columns
+        ax.plot(df['floor_min'], df['floor_max']) # columns
         expected_path = 'plots/plot2.png' # plot path
         actual_path = self.paths[1] # index
         self.assertTrue(os.path.exists(expected_path))
